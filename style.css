@@ -1,0 +1,51 @@
+
+
+.gameContainer {
+    width: 270px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100%;
+    height: 100px;
+    
+}
+
+.cell:first-child, .cell:nth-child(2n) {
+    border-right: 2px solid black;
+}
+
+.container1, .container2 {
+    border-bottom: 2px solid black;
+}
+
+.X {
+    display: flex;
+    justify-content: center;
+
+}
+
+.O {
+    display: flex;
+    justify-content: center;
+}
+
+.X::before {
+    content: "X";
+    color: red;
+    font-size: 100px;
+}
+
+.O::before {
+    content: "O";
+    color: royalblue;
+    font-size: 100px;
+    
+}
