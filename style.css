@@ -1,51 +1,95 @@
+body {
+    background: #e8e8e8;
+    font-family: 'Roboto', sans-serif;
+}
 
+main {
+    display: grid;
+}
 
 .gameContainer {
-    width: 270px;
-    margin: 0 auto;
+    display: grid;
+    height: 500px;
+    place-items: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
+tr {
+    height: 150px;
 }
 
-.cell {
-    width: 100%;
-    height: 100px;
+td {
+    border-radius: 10px;
+    width: 150px;
+    min-width: 85px;
+    text-align: center;
+    line-height: 7;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td[data-column="1"] {
+    border-right: 4px solid #000000;
+}
+
+td[data-column="3"] {
+    border-left: 4px solid #000000;
+}
+
+td[data-line="1"] {
+    border-bottom: 4px solid #000000;
+}
+
+td[data-line="3"] {
+    border-top: 4px solid #000000;
+}
+
+#startButton {
+    font-size: 17px;
+    font-weight: bold;
+    border: 2px solid #000000;
+    border-radius: 0.75em;
+    background: #e8e8e8;
+    width: 140px;
+    height: 50px;
+    margin: 0 auto;
+    transform: translateY(-0.2em);
+    transition: all 0.1s ease;
+    -webkit-box-shadow: 0 4px 0 0 #000000;
+    -moz-box-shadow: 0 4px 0 0 #000000;
+    box-shadow: 0 4px 0 0 #000000;
+}
+
+#startButton:active{
+    transform: translateY(0);
+    -webkit-box-shadow: 0 0px 0 0 #000000;
+    -moz-box-shadow: 0 0px 0 0 #000000;
+    box-shadow: 0 0px 0 0 #000000;
+}
+
+@media screen and (max-width: 400px) {
+    tr {
+        height: 120px;
+    }
     
 }
 
-.cell:first-child, .cell:nth-child(2n) {
-    border-right: 2px solid black;
-}
+@media screen and (min-width: 768px) {
+    #startButton:hover {
+        transform: translateY(-0.33em);
+        -webkit-box-shadow: 0 5.5px 0 0 #000000;
+        -moz-box-shadow: 0 5.5px 0 0 #000000;
+        box-shadow: 0 5.5px 0 0 #000000;
+        transition: all 0.1s ease;
+    }
 
-.container1, .container2 {
-    border-bottom: 2px solid black;
-}
-
-.X {
-    display: flex;
-    justify-content: center;
-
-}
-
-.O {
-    display: flex;
-    justify-content: center;
-}
-
-.X::before {
-    content: "X";
-    color: red;
-    font-size: 100px;
-}
-
-.O::before {
-    content: "O";
-    color: royalblue;
-    font-size: 100px;
+    td:hover {
+        background: #dfdfdf;
+    }
     
+    #startButton:active{
+        transform: translateY(0);
+        -webkit-box-shadow: 0 0px 0 0 #000000;
+        -moz-box-shadow: 0 0px 0 0 #000000;
+        box-shadow: 0 0px 0 0 #000000;
+    }
 }
